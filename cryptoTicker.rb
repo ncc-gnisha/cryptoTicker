@@ -23,6 +23,14 @@ class String
 end
 
 #
+# Error Catching
+#
+def print_exception(exception, explicit)
+    puts "[#{explicit ? 'EXPLICIT' : 'INEXPLICIT'}] #{exception.class}: #{exception.message}"
+    #puts exception.backtrace.join("\n")
+end
+
+#
 # Build and Display Table
 #
 def display(limit)
@@ -33,6 +41,7 @@ print "Price\t1 Hour\t24 Hour\t7 Days"
 print "\n"
 print "-" * 65
 print "\n"
+
 #
 # Retrieve Data
 #
@@ -66,8 +75,22 @@ result.first(limit).each do |crypto|
 end
 end
 
-# Run in a loop
+#
+# Run script in an infinate loop
+# CTRL + C to exit.
+#
+begin
 while 1==1
     display(10)
+    print "\n"
+    puts "Data provided by CoinMarketCap at " + Time.new.inspect
     sleep 300
 end
+
+rescue Interrupt => e
+    print_exception(e, true)
+rescue SignalException => e
+    print_exception(e, false)
+rescue Exception => e
+    print_exception(e, false)
+end	
