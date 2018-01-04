@@ -1,5 +1,7 @@
 [![Ruby Version](https://img.shields.io/badge/Ruby%20Version-2.0%2B-red.svg)]()
 [![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]()
+
+![cryptoTicker](cryptoTicker_screenshot.png)
 # cryptoTicker
 cryptoTicker is a Ruby CLI script that retrieves data from CoinMarketCap and displays them.
 
