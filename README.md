@@ -1,5 +1,5 @@
 [![Ruby Version](https://img.shields.io/badge/Ruby%20Version-2.0%2B-red.svg)]()
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]()
+[![Maintenance](https://img.shields.io/maintenance/yes/2019.svg)]()
 
 ![cryptoTicker](cryptoTicker_screenshot.png)
 # cryptoTicker
